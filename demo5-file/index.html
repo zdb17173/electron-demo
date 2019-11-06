@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    
+    <table id="producttable">
+        <thead>
+          <tr>
+            <td>file name</td>
+            <td>update time</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>root</td>
+            <td></td>
+          </tr>
+        </tbody>
+    </table>
+
+    <template id="productrow">
+        <tr>
+          <td id="file"></td>
+          <td></td>
+        </tr>
+    </template> 
+
+    <script >
+      var r = require('./render');
+      var dir = 'C:\\Users\\fran\\Documents\\WeChat Files\\zdb17173\\FileStorage\\File\\2019-10';
+      var res = r.readdir(dir);
+      console.log(res);
+
+      if ('content' in document.createElement('template')) {
+
+          // 使用现有的HTML tbody实例化表和该行与模板
+          let t = document.querySelector('#productrow'),
+          td = t.content.querySelectorAll("td");
+          td[0].textContent = "1235646565";
+          td[1].textContent = "Stuff";
+
+          // 克隆新行并将其插入表中
+          let tb = document.getElementsByTagName("tbody");
+          let clone = document.importNode(t.content, true);
+          tb[0].appendChild(clone);
+          
+          // 创建一个新行
+          td[0].textContent = "0384928528";
+          td[1].textContent = "Acme Kidney Beans";
+
+          // 克隆新行并将其插入表中
+          let clone2 = document.importNode(t.content, true);
+          tb[0].appendChild(clone2);
+
+        } else {
+          // 找到另一种方法来添加行到表，因为不支持HTML模板元素。
+        }
+    </script>
+  </body>
+</html>

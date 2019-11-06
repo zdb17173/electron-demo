@@ -1,0 +1,12 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug"
+  },
+  "devDependencies": {
+    "electron": "^6.0.12"
+  }
+}
