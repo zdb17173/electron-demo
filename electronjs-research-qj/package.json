@@ -24,7 +24,7 @@
     "@vue/cli-plugin-router": "^4.0.0",
     "@vue/cli-plugin-vuex": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
-    "electron": "^6.0.0",
+    "electron": "^15.5.5",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-electron-builder": "^1.4.0",
